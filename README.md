@@ -16,6 +16,8 @@ Node v7.0.0
 
 Tried to include some Es6 standards.
 
+DO NOT forget to replace your db configurations in config/db.js !
+
 ## Installation
 
 1. Clone/Download repository
