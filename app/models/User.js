@@ -5,6 +5,8 @@
 // grab mongoose
 let mongoose = require('mongoose')
 
+let requiredValidationMessage = '{PATH} is required'
+
 // define our User schema
 let userSchema = mongoose.Schema({
   username: { type: String, required: requiredValidationMessage, unique: true },
