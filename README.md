@@ -16,11 +16,11 @@ Node v7.0.0
 
 Tried to include some Es6 standards.
 
+Per type architecture used.
+
 DO NOT forget to :
 - replace your db configurations in config/db.js 
 - replace current session module for production use
-
-Per type architecture
 
 
 ## Installation
