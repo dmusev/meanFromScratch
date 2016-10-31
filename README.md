@@ -18,6 +18,8 @@ Tried to include some Es6 standards.
 
 DO NOT forget to replace your db configurations in config/db.js !
 
+Per type architecture
+
 ## Installation
 
 1. Clone/Download repository
