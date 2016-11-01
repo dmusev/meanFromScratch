@@ -29,3 +29,8 @@ DO NOT forget to :
 2. `npm install` - to install node package dependencies
 3. `bower install` - to install bower dependecies
 4. Run server.js file and you are done ! ( localhost:8081 is available ) 
+
+## TODOS:
+- implement JSON web tokens authentication
+- improve client-side
+- do black-box todo`s(eg: implement proper error handlers)
