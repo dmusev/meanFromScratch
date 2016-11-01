@@ -9,5 +9,6 @@ angular.module('meanApp', [
   'appRoutes',
   'MainCtrl',
   'UserCtrl',
-  'UserService'
+  'UserService',
+  'loginReg'
 ])

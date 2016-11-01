@@ -3,39 +3,22 @@
  */
 
 // modules
-let express = require('express')
+const express = require('express')
 let app = express()
-let bodyParser = require('body-parser')
-let methodOverride = require('method-override')
 
-// consigurations
-// let db = require('./config/db')
+// environment
+let env = process.env.NODE_ENV || 'development'
 
-// port
-let port = process.env.PORT || 8081
+let config = require('./app/config/config')[env]
 
-// connect to our mongoDB database
-// (uncomment after you enter in your own credentials in config/db.js)
-// mongoose.connect(db.url);
+require('./app/config/database')(config) // configure mongo db
+require('./app/config/express')(app, config)// configure express app
+require('./app/config/routes')(app)// configure our routes
+require('./app/config/passport')()
 
-// get data from body parameters and parse application/json
-app.use(bodyParser.json())
+app.listen(config.port)
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extend: true }))
-
-// override the header in the request aka simulate DELETE
-app.use(methodOverride('X-HTTP-Method-Override'))
-
-// set static files location /public/img => /img
-app.use(express.static(__dirname + '/public'))
-
-// configure our routes
-require('./app/routes')(app)
-
-app.listen(port)
-
-console.log('App is listening on port: ' + port)
+console.log('App is listening on port: ' + config.port)
 
 // exposing app
 exports = module.exports = app

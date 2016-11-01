@@ -4,4 +4,5 @@
 
 angular.module('MainCtrl', []).controller('MainController', function ($scope) {
   $scope.slogan = 'Main logic goes here!'
+  console.log('asdsad')
 })
